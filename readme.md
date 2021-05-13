@@ -1,16 +1,7 @@
-Mutation ----
 
-mutation {
-  addTodo(name: "new Mutation", completed: false, id: 57, date: "12/12/12"){
-    name 
-    date
-    completed
-    id 
-  }
-}
+Query --------------------
 
-
-Query ----
+- Get All Todos
 
 {
   getAllTodos {
@@ -24,7 +15,7 @@ Query ----
 }
 
 
-
+- Get Todo
 {
   getTodo(id: 1) {
     name
@@ -35,7 +26,7 @@ Query ----
   }
 }
 
-
+- get completed todos
 {
   getCompletedTodos{
     name
@@ -47,12 +38,22 @@ Query ----
 }
 
 
+Mutation ----------------------------
+- Add To Do
+
+mutation {
+  addTodo(name: "new Mutation", completed: false, id: 57, date: "12/12/12"){
+    name 
+    date
+    completed
+    id 
+  }
+}
+
+Complete Todo 
 mutation {
   completeTodo(id: 1){
     name 
   }
 }
 
-# few2.9-final
-# few2.9-final
-# few2.9-final
